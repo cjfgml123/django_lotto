@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 {% load staticfiles %}
 <html lang="ko">
@@ -13,23 +12,13 @@
 
 <body>
  <div class="page-header">
- <h1>
-   Selected Lotto Numbers
-   <a href="{% url 'new_lotto'%}">
-     <span class= "<span class="glyphicon glyphicon-plus btn btn-default"></span>
-     </a>
- </h1>
+   <h1>Information of the selected lotto num list</h1>
  </div>
  <div class="container lotto">
-    {% for lotto in lottos %}
- <h2>{{ lotto.text }}</h2>
-
-<h2><a href="{% url 'detail' lottokey=lotto.pk %}">{{lotto.text}}</a></h2>
-
-
- <p> {{ lotto.update_date }}</p>
- <p> {{ lotto.lottos | linebreaksbr }}</p>
- {% endfor %}
+   <h2>{{ lotto.text }}</h2>
+   <p> by {{ lotto.name }}</p>
+   <p> {{ lotto.update_date }}</p>
+   <p> {{ lotto.lottos | linebreaksbr }}</p>
  </div>
 </body>
 </html>

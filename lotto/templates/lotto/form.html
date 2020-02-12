@@ -16,9 +16,9 @@
   </div>
   <div class="container lotto">
    <form method="POST" class="post-form">
-	{% csrf_token %} <!-- CSRF (Cross Site Request Forgery) 공격 방지를 위한 Token 생성 -->
-	{{ form.as_p }} <!-- form을 p 태그로 감싸서 출력 -->
-	<button type="submit" class="save btn btn-default">Save</button>
+    {% csrf_token %} <!-- CSRF (Cross Site Request Forgery) 공격 방지를 위한 Token 생성 -->
+    {{ form.as_p }} <!-- form을 p 태그로 감싸서 출력 -->
+    <button type="submit">Save</button>
    </form>
   </div>
  </body>
